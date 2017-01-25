@@ -1,3 +1,4 @@
+
 package ca.ualberta.cs.lonelytwitter;
 
 import java.util.ArrayList;
@@ -38,8 +39,8 @@ public abstract class Tweet implements Tweetable{
         this.setMessage(Message);
     }
 
-    public Tweet(String Message) throws TweetTooLongException {
-        this.setMessage(Message);
+    public Tweet(String Message) {
+        this.Message = Message;
         this.date = new Date();
     }
 
@@ -48,4 +49,9 @@ public abstract class Tweet implements Tweetable{
     }
 
     public abstract boolean isImportant();
+
+    @Override
+    public String toString(){
+        return date.toString() + " | " + Message;
+    }
 }
