@@ -6,6 +6,10 @@ import java.util.Date;
  * Created by ysu3 on 1/17/17.
  */
 
+
+/**
+ * This class implements a mood object representing a mood. It will be contained in a tweet object
+ */
 public abstract class Mood{
     private Date date;
     private String mood;
